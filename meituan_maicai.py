@@ -54,6 +54,8 @@ def qiang_cai(device_name):
 
         if d(textContains="极速支付").exists:
             print("极速支付")
+            d.xpath(
+                '//*[@resource-id="android:id/content"]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]').click()
             play_voice("success")
             break
 
@@ -112,4 +114,5 @@ def run(device_name):
 if __name__ == '__main__':
     # 修改为设备编码，
     device_name = "b8c282ac"
+    device_name = "127.0.0.1:7555"
     run(device_name)
