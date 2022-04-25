@@ -114,5 +114,7 @@ def run(device_name):
 if __name__ == '__main__':
     # 修改为设备编码，
     device_name = "b8c282ac"
+    device_name = "d6ccb012"
+
     device_name = "127.0.0.1:7555"
     run(device_name)

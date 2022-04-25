@@ -56,7 +56,16 @@ def qiang_cai(device_name):
         if submit_button.exists:
             if d(textContains="非常抱歉").exists:
                 d.xpath('//*[@resource-id="com.wudaokou.hippo:id/title"]/android.widget.ImageView[1]').click()
-                pass
+            else:
+                d(text="提交订单").click()
+
+
+        if d(textContains="向右滑动验证").exists:
+            play_voice("error")
+            pass
+        if d(textContains="请您稍后再试").exists:
+            print("请您稍后再试,确定")
+            d(text="确定").click()
 
         if d(text="我知道了").exists:
             print("点击我知道了")
@@ -137,6 +146,10 @@ def run(device_name):
 
 if __name__ == '__main__':
     # 这是叮咚抢菜，此处填设备编号
-    device_name = "RFCN309ABWX"
     device_name = "127.0.0.1:21503"
+    # xiaomi
+    device_name = "d6ccb012"
+    # huawei
+    device_name = "KWG7N16C07009732"
+
     run(device_name)

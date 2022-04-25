@@ -131,5 +131,5 @@ def run(device_name):
 
 if __name__ == '__main__':
     # 这是叮咚抢菜，此处填设备编号
-    device_name = "RFCN309ABWX"
+    device_name = "d6ccb012"
     run(device_name)
